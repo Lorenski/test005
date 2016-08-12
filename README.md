@@ -17,10 +17,12 @@ Author
 
 The author of this project is Jaroslaw Krajewski.   
 He is a student at Gdansk University of Technology, Faculty of Electronics, Telecommunications and Informatics.   
-   
-http://eti.pg.edu.pl/   
-   
-   
+
+
+Faculty page: http://eti.pg.edu.pl/   
+Department page: http://mwave.eti.pg.gda.pl/  
+
+
 Project supervisors:   
 Michal Mrozowski   
 Piotr Sypek   
@@ -45,23 +47,23 @@ template <class Ti, class Tk>
 void pradsort( Ti* src, Tk* key, const int N, int bitCount, LVTimer* timers );
 ```
 
-`Ti` defines type of the input data which will be sorted, e.g. int.   
-`Tk` defines type of the keys which position sorted data.   
+`Ti` defines type of the input data which will be sorted, e.g. `int`.   
+`Tk` defines type of the keys which define new locations of the sorted data.   
 `src` points to the input data array and after sorting is performed it also contains sorted data.   
 `key` points to the integer array which after computations define location of the sorted data element   
 (after computations element `src[i]` is moved to the `src[ key[i] ]`).   
 `N` denotes length of the input data.   
-`bitCount` defines number of sorted bits in each inner iteration.   
+`bitCount` defines the number of the sorted bits in each inner iteration.   
 `timers` points to the additional structure which can be useful to monitor algorithm performance
-(for normal usage it should be set to null, for testing usage see source files located in the tests directory).
+(for normal usage it should be set to NULL, for testing usage see source files located in the tests directory).
 
 Compilation
 -----------
 
-This project contains three examples of possible template usages:
-test32.cpp - example for sorting of 32-bit integers,
-test64.cpp - example for sorting of 64-bit integers,
-test128.cpp - example for sorting of 128-bit integers.
+This project contains three examples of possible template usages:  
+test32.cpp - example for sorting of 32-bit integers,  
+test64.cpp - example for sorting of 64-bit integers,  
+test128.cpp - example for sorting of 128-bit integers.  
 
 These programs can be compiled in Linux using make command.
 
